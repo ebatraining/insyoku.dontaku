@@ -1,0 +1,798 @@
+@charset "utf-8";
+
+/*
+Theme Name: Mediacross 2015
+Theme URI:
+Description: The 2015 default theme for Mediacross.
+Author: Mediacross
+Author URI: http://medi-cro.jp/
+Version: 2015.1
+*/
+
+
+/* =============================================================  Reset and Utility.css  */
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-style:normal;font-size: 100%;font-weight: normal;vertical-align: baseline;box-sizing: border-box;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+input, textarea{margin: 0;padding: 0;outline: none;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;width:100%;}
+caption, th{text-align: left;}
+img {vertical-align: middle; max-width:100%;height: auto;}
+a:focus {outline:none;}
+
+.clearfix {min-height: 1px;}
+.clearfix:after {content: "."; display: block;clear: both;height: 0;visibility: hidden;}
+* html .clearfix {
+    height: 1px;
+    /*¥*//*/
+    height: auto;
+    overflow: hidden;
+    /**/
+}
+.both{clear:both;}
+
+/* =============================================================  HTML,Body,Anchor*/
+html {
+    font-size: 62.5%; /* 10px */
+    font-family: "ヒラギノ角ゴ Std W8","Hiragino Kaku Gothic Std", "メイリオ", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Verdana, Arial, Meiryo, "MS P Gothic", "MS Pゴシック", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+body {
+    background-color: #eedbbe;
+    font-size: 1.4em;
+    line-height: 1.25;
+    color: #000000;
+}
+html,body{height: 100%;}
+#wrapper{position: relative;min-height: 100%;height: auto !important;height: 100%;}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color:#1ABC9C;
+}
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+#ga{position:fixed;bottom:0;left:0;z-index:9999;color:#f00;}
+
+.photo {
+    border: 1px solid #d5d5d5;
+    padding: 5px;
+    box-shadow: 0 1px 3px rgba(128,128,128,0.2);
+    background-color: #fff;
+}
+
+/* =============================================================  text  */
+/*#content p{
+    line-height: 1.6;
+    font-size: 140%;
+    font-weight: 800;
+}
+*/
+.txtC{
+  text-align:center;
+  font-weight: bold;
+  background-color: #ffce7f;
+  padding: 3% 0;
+  }
+  .txtL{text-align:left;}.txtR{text-align:right;}
+.red{color:red}
+.bold{font-weight: bold;}
+.tdu_b{text-decoration:underline dashed #6c3c0a;}
+.fs9{font-size: 0.9rem;line-height: 1.4;}.fs10{font-size: 1rem;line-height: 1.4;}.fs11{font-size: 1.1rem;line-height: 1.4;}.fs12{font-size: 1.2rem;}.fs13{font-size: 1.3rem;}.fs16{font-size: 1.6rem;}.fs18{font-size: 1.8rem;}.fs21{font-size: 2.1rem;}.fs24{font-size: 2.4rem;}
+
+.floatL{float:left;}
+.floatR{float:right;}
+
+.disc li{
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+.circle li{
+    list-style-type: circle;
+    margin-left: 2rem;
+}
+.decimal li{
+    list-style-type: decimal;
+    margin-left: 2rem;
+}
+.kome li{
+    margin-left: 1em;
+    position: relative;
+}
+.kome li::before{
+    content: "※";
+    position: absolute;
+    left: -1em;
+}
+
+#reason .comment{
+  font-size: 100%;
+  font-weight: 900;
+  width: 100%;
+}
+#reason1 h3,p,
+#reason2 h3,p,
+#reason3 h3,p,
+#reason4 h3,p,
+#reason5 h3,p,
+#reason6 h3,p,
+#reason7 h3,p,
+#reason8 h3,p
+{
+  text-align: center;
+  margin: 0;
+}
+#reason1 h3,
+#reason2 h3,
+#reason4 h3,
+#reason5 h3,
+#reason6 h3,
+#reason7 h3,
+#reason8 h3
+{
+  font-size: 340%;
+  font-weight: 900;
+  font-style: oblique;
+}
+#reason3 h3{
+  font-size: 300%;
+  font-weight: 900;
+  font-style: oblique;
+}
+
+.textbox{
+  padding: 3% 0 2%;
+  background-color: #ff9d00;
+  border-radius: 10px;
+  margin: 50px 20px 30px;
+  position: relative;
+}
+.textbox p{
+  font-size: 140%;
+  font-weight: 900;
+  width: 100%;
+}
+.position_img{
+  position: absolute;
+  top: -40px;
+  left: -40px;
+}
+.line{
+  padding: 3% 0;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.line img,p{
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.line .icon{
+  width: 10%;
+  padding: 0 2%;
+}
+.line p{
+  text-align: left;
+}
+.marubatsu{
+  background-color: #ffebcc;
+  width: 90%;
+  border-radius: 10px;
+  margin: 2% auto;
+  padding: 2% 1%;
+}
+.marubatsu p{
+  text-align: left;
+  line-height: 1.6;
+  font-size: 120%;
+  font-weight: 900;
+  font-style: oblique;
+  width: 90%;
+}
+.marubatsu p span{
+  font-size: 60%;
+  vertical-align: middle;
+}
+.comment02{
+  width: 100%;
+  font-size: 80%;
+  text-align: left;
+  padding-left: 7%;
+  margin: 1% 0;
+  font-weight: 400;
+  font-family: "メイリオ", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Verdana, Arial, Meiryo, "MS P Gothic", "MS Pゴシック", sans-serif;
+}
+
+/* =============================================================  parts  */
+
+.ma0{margin: 0 !important;}
+/*space px*/
+.mt0{margin-top: 0 !important;}.mt5{margin-top: .5rem !important;}.mt10{margin-top: 1rem !important;}.mt15{margin-top: 1.5rem !important;}.mt20{margin-top: 2rem !important;}.mt25{margin-top: 2.5rem !important;}.mt30{margin-top: 3rem !important;}.mt35{margin-top: 3.5rem !important;}.mt40{margin-top: 4rem !important;}.mt45{margin-top: 4.5rem !important;}.mt50{margin-top: 5rem !important;}.mt100{margin-top: 10rem !important;}.mr0{margin-right: 0 !important;}.mr5{margin-right: .5rem !important;}.mr10{margin-right: 1rem !important;}.mr15{margin-right: 1.5rem !important;}.mr20{margin-right: 2rem !important;}.mr25{margin-right: 2.5rem !important;}.mr30{margin-right: 3rem !important;}.mr35{margin-right: 3.5rem !important;}.mr40{margin-right: 4rem !important;}.mr45{margin-right: 4.5rem !important;}.mr50{margin-right: 5rem !important;}.mr100{margin-right: 10rem !important;}.mb0{margin-bottom: 0 !important;}.mb5{margin-bottom: .5rem !important;}.mb10{margin-bottom: 1rem !important;}.mb15{margin-bottom: 1.5rem !important;}.mb20{margin-bottom: 2rem !important;}.mb25{margin-bottom: 2.5rem !important;}.mb30{margin-bottom: 3rem !important;}.mb35{margin-bottom: 3.5rem !important;}.mb40{margin-bottom: 4rem !important;}.mb45{margin-bottom: 4.5rem !important;}.mb50{margin-bottom: 5rem !important;}.mb100{margin-bottom: 10rem !important;}.ml0{margin-left: 0 !important;}.ml5{margin-left: .5rem !important;}.ml10{margin-left: 1rem !important;}.ml15{margin-left: 1.5rem !important;}.ml20{margin-left: 2rem !important;}.ml25{margin-left: 2.5rem !important;}.ml30{margin-left: 3rem !important;}.ml35{margin-left: 3.5rem !important;}.ml40{margin-left: 4rem !important;}.ml45{margin-left: 4.5rem !important;}.ml50{margin-left: 5rem !important;}.ml100{margin-left: 10rem !important;}.pt0{padding-top: 0 !important;}.pt5{padding-top: .5rem !important;}.pt10{padding-top: 1rem !important;}.pt15{padding-top: 1.5rem !important;}.pt20{padding-top: 2rem !important;}.pt25{padding-top: 2.5rem !important;}.pt30{padding-top: 3rem !important;}.pt35{padding-top: 3.5rem !important;}.pt40{padding-top: 4rem !important;}.pt45{padding-top: 4.5rem !important;}.pt50{padding-top: 5rem !important;}.pt100{padding-top: 10rem !important;}.pr0{padding-right: 0 !important;}.pr5{padding-right: .5rem !important;}.pr10{padding-right: 1rem !important;}.pr15{padding-right: 1.5rem !important;}.pr20{padding-right: 2rem !important;}.pr25{padding-right: 2.5rem !important;}.pr30{padding-right: 3rem !important;}.pr35{padding-right: 3.5rem !important;}.pr40{padding-right: 4rem !important;}.pr45{padding-right: 4.5rem !important;}.pr50{padding-right: 5rem !important;}.pr100{padding-right: 10rem !important;}.pb0{padding-bottom: 0 !important;}.pb5{padding-bottom: .5rem !important;}.pb10{padding-bottom: 1rem !important;}.pb15{padding-bottom: 1.5rem !important;}.pb20{padding-bottom: 2rem !important;}.pb25{padding-bottom: 2.5rem !important;}.pb30{padding-bottom: 3rem !important;}.pb35{padding-bottom: 3.5rem !important;}.pb40{padding-bottom: 4rem !important;}.pb45{padding-bottom: 4.5rem !important;}.pb50{padding-bottom: 5rem !important;}.pb100{padding-bottom: 10rem !important;}.pl0{padding-left: 0 !important;}.pl5{padding-left: .5rem !important;}.pl10{padding-left: 1rem !important;}.pl15{padding-left: 1.5rem !important;}.pl20{padding-left: 2rem !important;}.pl25{padding-left: 2.5rem !important;}.pl30{padding-left: 3rem !important;}.pl35{padding-left: 3.5rem !important;}.pl40{padding-left: 4rem !important;}.pl45{padding-left: 4.5rem !important;}.pl50{padding-left: 5rem !important;}.pl100{padding-left: 10rem !important;}
+
+/*space em*/
+.mb1{margin-bottom:1em !important;}.mb2{margin-bottom: 2em !important;}.mb3{margin-bottom:3em !important;}.mb4{margin-bottom:4em !important;}
+
+/* =============================================================  input */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+textarea,
+select{
+    font-size: 1.4rem;
+    padding: 0.4rem 0.6rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    vertical-align: baseline;
+    border-radius: 0.4rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"]{
+    width: 400px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #00196C;
+    background-color: #F9FAFF;
+    outline: none;
+}
+textarea{max-width: 40rem;}
+input.imeoff{ime-mode: disabled;}
+
+input[type="radio"],input[type="checkbox"]{
+    vertical-align: middle;
+    margin: 0 0.2rem 0 1rem;
+}
+
+span.wpcf7-list-item{
+    margin: 0 1rem 0 0 !important;
+}
+
+/*input[type="submit"],
+.submit_area input[type="button"]{
+    background-color: #8DD43A;
+    position: relative;
+    font-size: 1.4rem;
+    padding: .6rem 2rem;
+    text-align: center;
+    border-color: #72B51B;
+    border-style: solid;
+    border-width: 0 0 2px;
+    border-radius: .4rem;
+    color: #fff;
+}
+input[type="submit"]:hover{
+    background-color: #A7E05C;
+}
+input[type="submit"]:focus,
+.submit_area input[type="button"]:focus{
+    border-width: 2px 0 0;
+}
+input[type="submit"][disabled="disabled"]{
+    background-color: #eee;
+    border-color: #bbb;
+    color: #888;
+}*/
+
+label{display: inline-block;}
+
+.submit_area br{display: none;}
+
+.req{position: relative;}
+.req::after{
+    position: absolute;
+    right: 1.0rem;
+    content: "必須";
+    background-color: #F74850;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    display: inline-block;
+    margin-top: 0.3rem;
+    line-height: 1;
+}
+/* =============================================================  wrap,box  */
+.header_cont,
+#content,
+.footer_cont{
+    width:960px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#content {
+    margin-bottom: 23rem;
+}
+.content_wrap {
+    border-top: 40px solid #ea5c1e;
+}
+/* =============================================================  header  */
+#header {
+    background: #fff;
+    height: 110px;
+    box-shadow:rgba(194, 184, 170, 0.65098) 0px 0px 3px 3px;
+    -webkit-box-shadow:rgba(194, 184, 170, 0.65098) 0px 0px 3px 3px;
+    -moz-box-shadow:rgba(194, 184, 170, 0.65098) 0px 0px 3px 3px;
+    position: relative;
+}
+#header_logo,
+#header_tel,
+#header_contact {
+    float: left;
+    height: 110px;
+    box-sizing: border-box;
+}
+#header_tel,
+#header_contact {
+    padding-top: 2.5rem;
+}
+#header_tel {
+    margin-right: 2rem;
+}
+/* =============================================================  slider  */
+.slider_wrap{
+    width: 100%;
+    background: url('images/main_image.png') no-repeat;
+    overflow: hidden;
+}
+.slider_wrap img {
+    width: 100% !important;
+}
+/* =============================================================  contentWrapper  */
+.reason_sec {
+    margin-bottom: 6.5rem;
+    padding-top: 1%;
+}
+.reason_sec ul {
+    width: 900px;
+    margin: 0 auto 2rem;
+}
+.reason_sec li {
+    float: left;
+}
+.reason_sec li:last-child {
+    float: right;
+}
+.title1 {
+    margin: 0 0 2rem -30px;
+}
+.title1.sp {
+    margin-left: 0 !important;
+}
+.title1 img {
+    width: 100%;
+}
+.title1.sp img {
+    width: 97%;
+}
+#reason h2 {
+    margin: -9.7rem 0 1rem 0;
+}
+#reason ul {
+    margin-bottom: 5rem;
+    padding: 0 1.5rem;
+}
+#reason li {
+	float: left;
+    height: 210px;
+	margin-right: 70px;
+    padding-bottom: 3rem;
+    background-image: url('images/shadow.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+}
+#reason li img {
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+#reason li:last-child {
+	margin-right: 0;
+}
+#reason li img:hover {
+    margin-top: -.6em;
+    background-size: 93%;
+}
+#form_midashi {
+    margin-bottom: 2rem;
+}
+#formArea {
+    background: #ea5c1e;
+}
+#form {
+    position: relative;
+    width: 880px;
+    height: 1750px;
+    margin: 0 auto;
+}
+#formArea .inner {
+    box-sizing:border-box;
+    border: 5px solid #ff9d00;
+    border-radius: 7px;
+    background: #fff;
+    position: absolute;
+    top: -6rem;
+}
+#formArea th,
+#formArea td {
+    padding: 2.5rem 1rem;
+    background-color: #ffebcc;
+}
+#formArea th {
+    vertical-align: middle;
+    text-align: right;
+}
+#formArea th.hissu {
+    padding-right: 45px;
+    background-image: url('images/hissu.png');
+    background-repeat: no-repeat;
+    background-position: right 50%;
+}
+#formArea tr:nth-of-type(2n) th,
+#formArea tr:nth-of-type(2n) td {
+    background-color: #fff;
+}
+#formArea .submit_area {
+    text-align: center;
+}
+#formArea .submit_area input {
+    text-indent: -9999px;
+    width: 429px;
+    height: 90px;
+    background: url('images/submit_btn.png') no-repeat;
+    border: none;
+}
+.toTop {
+    width: 60px;
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    text-align: center;
+}
+.toTop .txt {
+    color: #ff9d00;
+    font-size: 1rem;
+}
+/* =============================================================  footer  */
+.footer_wrap{
+    width:100%;
+}
+.footer_cont{
+    position: relative;
+    padding: 2rem 0;
+}
+
+#page_top {
+    background: #ff9d00;
+    border-radius: 0.5rem;
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    padding: 2rem 0;
+    text-align: center;
+    text-decoration: none;
+    width: 8rem;
+    position: fixed;
+    bottom:  1.8rem;
+    right:  1.8rem;
+}
+#page_top:hover {
+    text-decoration: none;
+}
+.map {
+    width: 435px;
+    float: left;
+    margin-right: 2.5rem;
+}
+
+
+.footer_info{
+    width: 435px;
+    float: left;
+    line-height: 1.8;
+}
+.footer_info h3{
+    font-weight: bold;
+    margin: .5rem 0;
+}
+.footer_info p {
+    font-size: 12px;
+}
+
+.copyright{
+    clear: both;
+    display: block;
+    font-size: 1.1rem;
+    padding:  1rem 0 0;
+}
+
+/* =============================================================  sidebar  */
+
+.side_box{
+    border: 1px solid #ccc;
+    margin-bottom: 2rem;
+}
+.side_box_inner{
+    padding: 1rem;
+}
+
+.side_title{
+    background-color: #2980b9;
+    color: #ffffff;
+    margin-bottom: 0;
+    padding: 0.5rem 1rem;
+}
+
+/* =============================================================  home  */
+.post_cont{
+    border-bottom:1px dashed #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+.post_cont:last-child{
+    border: none;
+    padding-bottom:0;
+    margin-bottom: 0;
+}
+.post_cont_title{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.post_catbtn{
+    border-radius: .5rem;
+    box-shadow: 0px 1px 1px rgba(000,000,000,0.2),
+        inset 0px 0px 2px rgba(224,224,224,1);
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f0f0f0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f0f0f0));
+    background: linear-gradient(to bottom,  #ffffff 0%,#f0f0f0 100%);
+}
+
+/* =============================================================  common  */
+.sec{
+    margin-bottom: 2rem;
+    position: relative;
+}
+.sec_inner{
+    border: 1px solid #ccc;
+    padding: 2rem;
+}
+
+#pagetitle{}
+
+.title{
+    background-color: #2980b9;
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    padding: 1rem 2.1rem;
+}
+
+.post_cont_date{
+    font-size: 1.2rem;
+    text-align: right;
+}
+/* =============================================================  page-thankyou*/
+.thankyou{
+    position: absolute;
+    background: #FFF;
+    top: 200px;
+    left: 0;
+    right: 0;
+    width: 960px;
+    text-align: center;
+    padding: 20px 40px;
+    border: #ccc solid 2px;
+    margin: auto;
+}
+/* =============================================================  post  */
+/* category list */
+.cat_list{margin-bottom: 4rem;}
+
+/* single page */
+.single #content article{
+    margin-bottom: 5rem;
+}
+
+.postcontent{
+    padding: 1.5rem 0 3rem;
+}
+.postcontent p,
+.postcontent ul,
+.postcontent ol{
+    margin-bottom: 1.5rem;
+}
+.postcontent strong{
+    font-weight: bold;
+}
+.postcontent ul{
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+.postcontent ol{
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+}
+.postcontent .alignleft{
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+}
+.postcontent .alignright{
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+}
+.postcontent .aligncenter{
+    display: block;
+    margin: 0 auto 1rem;
+}
+.postcontent hr{
+    border-color: #ccc;
+    border-style: dashed;
+    border-width: 1px 0 0;
+    margin: 2rem 0;
+    height: 1px;
+    width: 100%;
+}
+
+.prev-next{
+    position: relative;
+    text-align: center;
+}
+.prev-next a{
+    display: inline-block;
+    font-size: 1.2rem !important;
+    font-weight: normal;
+    padding: 0.5rem 1.2rem;
+}
+.prev-next a[rel="prev"]{
+    position: absolute;
+    left: 0;
+}
+.prev-next a[rel="next"]{
+    position: absolute;
+    right: 0;
+}
+
+/* =============================================================  Pagination  */
+
+.pagination {
+    clear: both;
+    padding: 2rem 0;
+    position: relative;
+    font-size: 1rem;
+    text-align:center;
+}
+.pagination span, .pagination a {
+    display: inline-block;
+    /*float: left;*/
+    width: auto;
+    margin: 2px 2px 2px 0;
+    padding: 0.6rem 1rem;
+    background-color: #fff;
+    color: #555;
+    text-decoration: none;
+    border-radius:2px;
+}
+.pagination a {
+    border: 1px solid #ccc;
+}
+.pagination a:hover{
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+.pagination .current{
+    padding: 0.6rem 1rem;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+
+
+/* =============================================================
+jquery plugin css
+============================================================= */
+
+/* =============================================================  slider (slick.js) */
+.slick-slider{position: relative;display: block;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;-webkit-touch-callout: none;-khtml-user-select: none;-ms-touch-action: pan-y;touch-action: pan-y;-webkit-tap-highlight-color: transparent;}.slick-list{position: relative;display: block;overflow: hidden;margin: 0;padding: 0;}.slick-list:focus{outline: none;}.slick-list.dragging{cursor: pointer;cursor: hand;}.slick-slider .slick-track,.slick-slider .slick-list{-webkit-transform: translate3d(0, 0, 0);-moz-transform: translate3d(0, 0, 0);-ms-transform: translate3d(0, 0, 0);-o-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}.slick-track{position: relative;top: 0;left: 0;display: block;}.slick-track:before,.slick-track:after{display: table;content: '';}.slick-track:after{clear: both;}.slick-loading .slick-track{visibility: hidden;}.slick-slide{display: none;float: left;height: 100%;min-height: 1px;position: relative;}[dir='rtl'] .slick-slide{float: right;}.slick-slide img{display: block;width:100%;}.slick-slide.slick-loading img{display: none;}.slick-slide.dragging img{pointer-events: none;}.slick-initialized .slick-slide{display: block;}.slick-loading .slick-slide{visibility: hidden;}.slick-vertical .slick-slide{display: block;height: auto;border: 1px solid transparent;}
+
+/* add */
+.slick-list{
+    border: 1px solid #ddd;
+    margin-bottom: 1em;
+}
+
+.slick-prev,
+.slick-next{
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 8em;
+}
+.slick-prev:focus,
+.slick-next:focus{
+    outline: none;
+}
+.slick-prev{
+    left: -3em;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 24px 20px 24px 0;
+    border-color: transparent #1fa4d0 transparent transparent;
+}
+.slick-next{
+    right: -3em;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 24px 0 24px 20px;
+    border-color: transparent transparent transparent #1fa4d0;
+}
+
+.slick-dots{
+    text-align: center;
+    margin-bottom: 2em;
+}
+.slick-dots li{
+    display: inline-block;
+    margin: 0 3px;
+}
+.slick-dots button{
+    background-color: #dbdbda;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 10px;
+    line-height: 1;
+    padding: 0;
+    width: 10px;
+    vertical-align: middle;
+    text-indent: -9999px;
+}
+.slick-dots .slick-active button{background-color: #1FA3D0;}
+
+/* == malihu jquery custom scrollbar plugin == Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller */
+
+/* 1. BASIC STYLE ============================================================= */
+.mCustomScrollbar{ -ms-touch-action: none; touch-action: none; /* MSPointer events - direct all pointer events to js */ }.mCustomScrollbar.mCS_no_scrollbar{ -ms-touch-action: auto; touch-action: auto; }.mCustomScrollBox{ /* contains plugin's markup */position: relative;overflow: hidden;height: 100%;max-width: 100%;outline: none;direction: ltr;}.mCSB_container{ /* contains the original content */overflow: hidden;width: auto;height: auto;}
+/* 2. VERTICAL SCROLLBAR y-axis============================================================= */
+.mCSB_inside > .mCSB_container{ margin-right: 30px; }.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */.mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */margin-right: 0;margin-left: 30px;}.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */position: absolute;width: 16px;height: auto;left: auto;top: 0;right: 0;bottom: 0;}.mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, .mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */right: auto;left: 0;}.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */position: absolute;top: 0;left: 0;bottom: 0;right: 0; height: auto;}.mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }.mCSB_scrollTools .mCSB_draggerRail{width: 2px;height: 100%;margin: 0 auto;-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;}.mCSB_scrollTools .mCSB_dragger{ /* the draggable element */cursor: pointer;width: 100%;height: 30px; /* minimum dragger height */z-index: 1;}.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */position: relative;width: 4px;height: 100%;margin: 0 auto;-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;text-align: center;}.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width: 12px; /* auto-expanded scrollbar */ }.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 8px; /* auto-expanded scrollbar */ }.mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown{display: block;position: absolute;height: 20px;width: 100%;overflow: hidden;margin: 0 auto;cursor: pointer;}.mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; }
+/* 3. HORIZONTAL SCROLLBAR x-axis============================================================= */
+.mCSB_horizontal.mCSB_inside > .mCSB_container{margin-right: 0;margin-bottom: 30px;}.mCSB_horizontal.mCSB_outside > .mCSB_container{ min-height: 100%; }.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; } /* non-visible scrollbar */.mCSB_scrollTools.mCSB_scrollTools_horizontal{width: auto;height: 16px;top: auto;right: 0;bottom: 0;left: 0;}.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{ bottom: -26px; } /* scrollbar position: outside */.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer{ margin: 0 20px; }.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{width: 100%;height: 2px;margin: 7px 0;}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{width: 30px; /* minimum dragger width */height: 100%;left: 0;}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width: 100%;height: 4px;margin: 6px auto;}.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{height: 12px; /* auto-expanded scrollbar */margin: 2px auto;}.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{height: 8px; /* auto-expanded scrollbar */margin: 4px 0;}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{display: block;position: absolute;width: 20px;height: 100%;overflow: hidden;margin: 0 auto;cursor: pointer;}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{ left: 0; }.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{ right: 0; }
+/* 4. VERTICAL AND HORIZONTAL SCROLLBARS yx-axis ============================================================= */
+.mCSB_container_wrapper{position: absolute;height: auto;width: auto;overflow: hidden;top: 0;left: 0;right: 0;bottom: 0;margin-right: 30px;margin-bottom: 30px;}.mCSB_container_wrapper > .mCSB_container{padding-right: 30px;padding-bottom: 30px;}.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 20px; }.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 20px; }/* non-visible horizontal scrollbar */.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 0; }/* non-visible vertical scrollbar/RTL direction/left-side scrollbar */.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 0; }/* RTL direction/left-side scrollbar */.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 20px; }/* non-visible scrollbar/RTL direction/left-side scrollbar */.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 0; }.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper{ /* RTL direction/left-side scrollbar */margin-right: 0;margin-left: 30px;}.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container{ padding-right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container{ padding-bottom: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{margin-right: 0; /* non-visible scrollbar */margin-left: 0;}/* non-visible horizontal scrollbar */.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; }
+/* 5. TRANSITIONS ============================================================= */
+.mCSB_scrollTools, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight{-webkit-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;-moz-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;-o-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;transition: opacity .2s ease-in-out, background-color .2s ease-in-out;}.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, /* auto-expanded scrollbar */.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail{-webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s, margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,opacity .2s ease-in-out, background-color .2s ease-in-out; -moz-transition: width .2s ease-out .2s, height .2s ease-out .2s, margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,opacity .2s ease-in-out, background-color .2s ease-in-out; -o-transition: width .2s ease-out .2s, height .2s ease-out .2s, margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,opacity .2s ease-in-out, background-color .2s ease-in-out; transition: width .2s ease-out .2s, height .2s ease-out .2s, margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,opacity .2s ease-in-out, background-color .2s ease-in-out; }
+/* 6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS ============================================================= */
+
+/* 6.1 THEMES ---------------------------------------- */
+/* default theme ("light") */
+.mCSB_scrollTools{ opacity: 0.75; filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; }.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 0; filter: "alpha(opacity=0)"; -ms-filter: "alpha(opacity=0)"; }.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,.mCustomScrollBox:hover > .mCSB_scrollTools,.mCustomScrollBox:hover ~ .mCSB_scrollTools,.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 1; filter: "alpha(opacity=100)"; -ms-filter: "alpha(opacity=100)"; }.mCSB_scrollTools .mCSB_draggerRail{background-color: #000; background-color: rgba(0,0,0,0.4);filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; }.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #fff; background-color: rgba(255,255,255,0.75);filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; }.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color: #fff; background-color: rgba(255,255,255,0.85);filter: "alpha(opacity=85)"; -ms-filter: "alpha(opacity=85)"; }.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color: #fff; background-color: rgba(255,255,255,0.9);filter: "alpha(opacity=90)"; -ms-filter: "alpha(opacity=90)"; }.mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight{background-image: url('images/mCSB_buttons.png'); /* css sprites */background-repeat: no-repeat;opacity: 0.4; filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; }.mCSB_scrollTools .mCSB_buttonUp{background-position: 0 0;}.mCSB_scrollTools .mCSB_buttonDown{background-position: 0 -20px;}.mCSB_scrollTools .mCSB_buttonLeft{background-position: 0 -40px;}.mCSB_scrollTools .mCSB_buttonRight{background-position: 0 -56px;}.mCSB_scrollTools .mCSB_buttonUp:hover,.mCSB_scrollTools .mCSB_buttonDown:hover,.mCSB_scrollTools .mCSB_buttonLeft:hover,.mCSB_scrollTools .mCSB_buttonRight:hover{ opacity: 0.75; filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; }.mCSB_scrollTools .mCSB_buttonUp:active,.mCSB_scrollTools .mCSB_buttonDown:active,.mCSB_scrollTools .mCSB_buttonLeft:active,.mCSB_scrollTools .mCSB_buttonRight:active{ opacity: 0.9; filter: "alpha(opacity=90)"; -ms-filter: "alpha(opacity=90)"; }
+
+/* theme: "dark" */
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.85); }.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.9); }.mCS-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px 0; }.mCS-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }.mCS-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }.mCS-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }
