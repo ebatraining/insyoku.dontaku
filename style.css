@@ -359,7 +359,8 @@ label{display: inline-block;}
     width: 100%;
     background: url('images/main_image.png') no-repeat;
     overflow: hidden;
-    margin-top: 110px;
+    margin-top:100px;
+    padding-top:-100px;
     z-index: 1;
 }
 .slider_wrap img {
@@ -370,7 +371,6 @@ label{display: inline-block;}
     margin-bottom: 6.5rem;
     margin-top:-100px;
     padding-top:100px;
-
 }
 .reason_sec ul {
     width: 900px;
@@ -425,6 +425,8 @@ label{display: inline-block;}
 }
 #form_midashi {
     margin-bottom: 2rem;
+    margin-top:-120px;
+    padding-top:120px;
 }
 #formArea {
     background: #ea5c1e;
@@ -434,6 +436,7 @@ label{display: inline-block;}
     width: 880px;
     height: 1750px;
     margin: 0 auto;
+    margin-top:-100px;
 }
 #formArea .inner {
     box-sizing:border-box;
