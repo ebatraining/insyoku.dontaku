@@ -168,7 +168,7 @@ a:active {
   position: absolute;
   top: -40px;
   left: -40px;
-}
+
 .line{
   padding: 3% 0;
   overflow: hidden;
@@ -333,7 +333,10 @@ label{display: inline-block;}
     box-shadow:rgba(194, 184, 170, 0.65098) 0px 0px 3px 3px;
     -webkit-box-shadow:rgba(194, 184, 170, 0.65098) 0px 0px 3px 3px;
     -moz-box-shadow:rgba(194, 184, 170, 0.65098) 0px 0px 3px 3px;
-    position: relative;
+    top: 0px;                   /* 位置(上0px) */
+    left: 0px;                  /* 位置(右0px) */
+    width: 100%;                /* 横幅100%　*/
+    position: fixed;            /* ヘッダーの固定 */
 }
 #header_logo,
 #header_tel,
@@ -351,9 +354,9 @@ label{display: inline-block;}
 }
 /* =============================================================  slider  */
 .slider_wrap{
+   margin-top: 110px;
     width: 100%;
     background: url('images/main_image.png') no-repeat;
-    overflow: hidden;
 }
 .slider_wrap img {
     width: 100% !important;
