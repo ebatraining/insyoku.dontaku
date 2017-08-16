@@ -3,7 +3,7 @@ $(function(){
 
 //---------------------------------------------------------------------------------------------- http://semooh.jp/jquery/cont/doc/easing/
 
-	$('a,.submit_area input').not('#gnav a,#reason li a').hover(function(){
+ $('a,.submit_area input').not('#gnav a,#reason li a').hover(function(){
 			$(this).stop(true,true).animate({opacity: 0.6},200, 'easeOutQuart');
 		}, function(){
 			$(this).stop(true,true).animate({opacity: 1.0},400,'easeOutQuart');
