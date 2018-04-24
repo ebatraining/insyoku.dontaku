@@ -12,24 +12,22 @@
 <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://insyoku.dontaku.jp/feed/atom/">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 <link rel="stylesheet" type="text/css" media="all" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
-
 <link rel="stylesheet" type="text/css" media="all" href="style.css">
-
-
 <link rel='stylesheet' id='contact-form-7-css'  href='http://insyoku.dontaku.jp/wp-content/plugins/contact-form-7/includes/css/styles.css' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-confirm-css'  href='http://insyoku.dontaku.jp/wp-content/plugins/contact-form-7-add-confirm/includes/css/styles.css' type='text/css' media='all' />
 <script type='text/javascript' src='http://insyoku.dontaku.jp/wp-includes/js/jquery/jquery.js'></script>
 <script type='text/javascript' src='http://insyoku.dontaku.jp/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<!--googleAPI-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="./js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0u4djv6RtTQpNZ0tpQaL3g95kJzff0tk"></script>
 </head>
-<body class="home blog">
+	
+<body class="home blog" onload="initialize();">
+	
+		
 <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWSC8S"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NWSC8S');</script>
+
 <!-- End Google Tag Manager -->
 <div id="wrapper">
     <header id="header">
@@ -386,19 +384,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 <div id="footer" class="footer_wrap">
     <footer class="footer_cont clearfix">
+		<div id="g_map"></div>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26588.2465999956!2d130.39175!3d33.591529!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191880cdce0a9%3A0x68d83694d9980c99!2z44CSODEwLTAwNzMg56aP5bKh55yM56aP5bKh5biC5Lit5aSu5Yy66Iie6ba077yS5LiB55uu77yY4oiS77yS77yQ!5e0!3m2!1sja!2sjp!4v1448569469893" width="435" height="270" title="googlemap"></iframe>
         </div>
         <div class="footer_info clearfix">
-            <h2><img src="images/footer_logo.png" alt="どんたく会計"></h2>
-            <h3>どんたく会計</h3>
-            <p>
-                〒810-0073　福岡県福岡市中央区舞鶴2丁目8-20<br>
-                                TEL:092-791-3334  FAX:092-781-0253<br>
-                                URL:<a href="http://dontaku.jp/" target="_blank">http://dontaku.jp/</a>
-            </p>
-            <small class="copyright">Copyright &copy; 2015 DONTAKU All Rights Reserved.</small>
-        </div>
+			<div id="flex">
+				<div class="flex_inner">
+					<div class="flex-item_image">
+						<h2><img src="images/footer_logo.png" alt="どんたく会計"></h2>
+					</div>
+					<div class="flex-item_text">
+						<h3>どんたく会計</h3>
+						<p>
+							〒810-0073　福岡県福岡市中央区舞鶴2丁目8-20<br>
+										TEL:092-791-3334  FAX:092-781-0253<br>
+										URL:<a href="http://dontaku.jp/" target="_blank">http://dontaku.jp/</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<p><small class="copyright">Copyright &copy; 2015 DONTAKU All Rights Reserved.</small></p>
+		</div>
+</div>
 
     </footer>
 </div>
@@ -407,7 +414,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- javascript -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>

@@ -52,12 +52,12 @@ body {
     color: #000000;
 }
 html,body{height: 100%;}
-#wrapper{position: relative;min-height: 100%;height: auto !important;height: 100%;}
+#wrapper{max-width:1000px;margin:0 auto;}
 
 a:link,
 a:visited {
     text-decoration: none;
-    color:#1ABC9C;
+    color:#ffffff;
 }
 a:hover,
 a:active {
@@ -175,9 +175,9 @@ a:active {
   vertical-align: middle;
 }
 .line img,p{
-  display: inline-block;
   vertical-align: middle;
-  overflow: hidden;
+    overflow: hidden;
+    margin-right: 15px;
 }
 .line .icon{
   width: 10%;
@@ -359,8 +359,7 @@ label{display: inline-block;}
     width: 100%;
     background: url('images/main_image.png') no-repeat;
     overflow: hidden;
-    margin-top:100px;
-    padding-top:-100px;
+    margin-top: 110px;
     z-index: 1;
 }
 .slider_wrap img {
@@ -371,6 +370,7 @@ label{display: inline-block;}
     margin-bottom: 6.5rem;
     margin-top:-100px;
     padding-top:100px;
+
 }
 .reason_sec ul {
     width: 900px;
@@ -425,8 +425,6 @@ label{display: inline-block;}
 }
 #form_midashi {
     margin-bottom: 2rem;
-    margin-top:-120px;
-    padding-top:120px;
 }
 #formArea {
     background: #ea5c1e;
@@ -436,7 +434,6 @@ label{display: inline-block;}
     width: 880px;
     height: 1750px;
     margin: 0 auto;
-    margin-top:-100px;
 }
 #formArea .inner {
     box-sizing:border-box;
@@ -487,8 +484,11 @@ label{display: inline-block;}
     font-size: 1rem;
 }
 /* =============================================================  footer  */
+
+
 .footer_wrap{
     width:100%;
+	background-color:#ea5c1e;
 }
 .footer_cont{
     position: relative;
@@ -512,31 +512,48 @@ label{display: inline-block;}
 #page_top:hover {
     text-decoration: none;
 }
-.map {
-    width: 435px;
-    float: left;
-    margin-right: 2.5rem;
+#g_map{
+	width:100%;
+	height:400px;
+}
+#flex{
+	display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.footer_info{
-    width: 435px;
+.flex_inner {
+    width: 50%;
+    overflow: hidden;
+}
+.flex-item_image {
+    width: 15%;
     float: left;
+    margin: 10% 0 5% 15%;
+}
+.flex-item_text {
+    width: 65%;
+    float: right;
+    margin-top: 5%;
+}
+.footer_info{
     line-height: 1.8;
 }
 .footer_info h3{
+	color: #ffffff;
     font-weight: bold;
-    margin: .5rem 0;
+    margin-top: 10%;
 }
 .footer_info p {
     font-size: 12px;
+    color: #ffffff;
 }
-
 .copyright{
-    clear: both;
-    display: block;
+	color:#ff9d00;
     font-size: 1.1rem;
     padding:  1rem 0 0;
+	text-align:center;
 }
 
 /* =============================================================  sidebar  */
