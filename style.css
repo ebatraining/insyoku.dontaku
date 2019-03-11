@@ -171,12 +171,14 @@ a:active {
 }
 .line{
   padding: 3% 0;
-  overflow: hidden;
-  vertical-align: middle;
+  /*overflow: hidden;
+  vertical-align: middle;*/
+  display:flex;
+  align-items:center;
 }
 .line img,p{
-  vertical-align: middle;
-    overflow: hidden;
+  /*vertical-align: middle;
+    overflow: hidden;*/
     margin-right: 15px;
 }
 .line .icon{
